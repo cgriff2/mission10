@@ -25,29 +25,29 @@ function BowlerList() {
           <thead>
             <tr>
               <th>Bowler Name</th>
-              <th>Team Name</th>
               <th>Address</th>
               <th>City</th>
               <th>State</th>
               <th>Zip</th>
               <th>Phone</th>
+              <th>Team Name</th>
             </tr>
           </thead>
           <tbody>
             {bowlerData.map(
               (f) =>
-                (f.TeamName === 'Marlins' || f.TeamName === 'Sharks') && (
-                  <tr key={f.BowlerId}>
+                (f.teamName === 'Marlins' || f.teamName === 'Sharks') && (
+                  <tr key={f.bowlerId}>
                     <td>
-                      {f.BowlerFirstName} {f.BowlerMiddleInit}{' '}
-                      {f.BowlerLastName}
+                      {f.bowlerFirstName} {f.bowlerMiddleInit}{' '}
+                      {f.bowlerLastName}
                     </td>
-                    <td>{f.BowlerAddress}</td>
-                    <td>{f.BowlerCity}</td>
-                    <td>{f.BowlerState}</td>
-                    <td>{f.BowlerZip}</td>
-                    <td>{f.BowlerPhone}</td>
-                    <td>{f.TeamName}</td>
+                    <td>{f.bowlerAddress}</td>
+                    <td>{f.bowlerCity}</td>
+                    <td>{f.bowlerState}</td>
+                    <td>{f.bowlerZip}</td>
+                    <td>{f.bowlerPhoneNumber}</td>
+                    <td>{f.teamName}</td>
                   </tr>
                 ),
             )}
